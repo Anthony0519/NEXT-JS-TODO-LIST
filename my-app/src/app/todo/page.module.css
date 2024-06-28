@@ -1,0 +1,148 @@
+.main {
+    display: flex;
+    width:100%;
+    height: 100vh;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    background: rgb(219, 217, 217);
+    /* background: rgb(209, 88, 88); */
+    /* background: linear-gradient(144deg, rgb(183, 182, 214) 0%, rgba(220,206,240,1) 100%); */
+  }
+
+  .form {
+    width:100%;
+    height:30vh;
+    display:flex;
+    flex-direction:column;
+    /* background:green; */
+  }
+
+  .taskList {
+    margin-top: 40px;
+    width: 100%;
+    /* max-width: 600px; */
+    /* background:blue; */
+    padding-top:20px;
+    height:70vh;
+    display:flex;
+    max-height:70vh;
+    overflow-y: auto;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .taskListholder{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .addTask {
+    width:100%;
+    height:60%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    justify-content: space-around;
+    /* background: yellow; */
+  }
+
+  .caption {
+    width:100%;
+    height:40%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center ;
+    align-items: flex-end;
+    /* background: blue; */
+    color:#935ABE
+  }
+
+  .inputHolder {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    /* padding: 10px; */
+    /* background-color: #df1212; */
+    border-radius: 25px;
+  }
+
+  .inputHolder input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .inputHolder button {
+    border: none;
+    background-color: #935ABE;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+
+  .inputHolder button:hover {
+    background-color: #804ea6;
+  }
+
+  .taskItem {
+    width: 100%;
+    max-width: 600px;
+    /* min-height:600px; */
+    /* height:100px; */
+    /* margin: 0 auto;  */
+    margin-block: 5px;
+    padding:10px;
+    display: flex;
+    justify-content:space-between;
+    border: 1px solid #804ea6;
+    /* margin-bottom: 10px; */
+    border-radius: 5px;
+    background: rgb(135,134,187);
+    background: linear-gradient(144deg, rgb(183, 182, 214) 0%, rgba(220,206,240,1) 100%);
+}
+
+.taskButtons {
+  display: flex;
+  gap: 10px; /* Ensures a gap between buttons */
+}
+
+.editButton {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.deleteButton {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editButton:hover {
+  background-color: rgb(2, 2, 49);
+}
+.deleteButton:hover {
+  background-color: rgb(116, 3, 3);
+}
