@@ -16,16 +16,7 @@ export const createUser = async (prevState, formData)=>{
         password: formData.get("password"),
     }
 
-    try {
-        await dbConnect()
-        const user = new userModel(data)
-        await user.save()
-        // revalidatePath('/')
-        return { message: `user Created` }
-    } catch (e) {
-        return { error: 'Failed to create user' + e.message }
-    }
-}
+  
 
 export const addTask = async (prevState, formData)=>{
     const data = {
