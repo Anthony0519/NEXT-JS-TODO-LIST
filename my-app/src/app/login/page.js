@@ -2,7 +2,7 @@
 
 import styles from "./page.module.css";
 import Link from "next/link";
-import Spinner from "./Loadings/spinner"
+import Spinner from ".././Loadings/spinner"
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Modal from "../../component/modal";
