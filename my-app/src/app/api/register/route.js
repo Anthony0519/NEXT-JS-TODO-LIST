@@ -19,14 +19,14 @@ export const POST = async(req)=>{
             return NextResponse.json({ error: 'Email already exists' },{status:400}) 
         }
         // hash the password
-        const saltPass = await bcrypt.genSaltSync(10)
-        const hash = await bcrypt.hashSync(saltPass)
+        const saltPass = bcrypt.genSaltSync(10)
+        const hash = bcrypt.hashSync(password,saltPass)
         const user = await userModel.create({
             firstName,
             lastName,
             email,
             phoneNumber,
-            password,
+            password:hash,
             gender,
             DOB
         })

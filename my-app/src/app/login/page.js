@@ -73,10 +73,10 @@ export default function SignUp() {
             </div>
             <div className={styles.btn}>
               {error && <span className={styles.error}>{error}</span>}
-              {pending ? <Spinner /> : <button type="submit">Sign up</button>}
+              {pending ? <Spinner /> : <button type="submit">LOGIN</button>}
             </div>
             <div>
-              <h3>Already have an account with us? <Link href="/" style={{ color: "#935ABE", textDecoration: "none" }}>login</Link></h3>
+              <h3>Already have an account with us? <Link href="/" style={{ color: "#935ABE", textDecoration: "none" }}>Sign up</Link></h3>
             </div>
           </form>
           {showModal && <Modal message={success} onClose={handleModal} />}

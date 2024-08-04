@@ -10,7 +10,7 @@ export const POST = async(req)=>{
     try{
         await dbConnect()
         // get the requirement
-        const {email,password} = await res.json() 
+        const {email,password} = await req.json() 
 
         if(!email || !password){
             return NextResponse.json({ error: 'please enter all fields' },{status:400})
@@ -27,12 +27,12 @@ export const POST = async(req)=>{
         }
 
         const token = await jwt.sign({
-            userId:emailExit._id,
+            userId:emailExist._id,
             Tel:emailExist.phoneNumber
         },process.env.JWT_SECRET,{expiresIn:"1d"})
 
         // show success message 
-        return NextResponse.json({message:"successfuly loggedIn"},status:200)
+        return NextResponse.json({message:"successfuly loggedIn"},{status:200})
 
 
     }catch(error){
